@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+ 
+namespace For_Answer
+{
+    class Task //Метод
+    {
+        public int a;
+        public int b;
+        public int h;
+        private int y;
+        public Task(int x, int y, int n)
+        {
+            a = x; b = y; h = n;
+        }
+ 
+        public void Tasker() //Функция метода
+        {
+            for (int x = a; x <= b; x += h)
+            {
+                if (x < 0)
+                {
+                    Console.WriteLine(y = 0);
+                }
+                if (x > 0 && x != 1)
+                {
+                    Console.WriteLine(y = (int)Math.Pow(x, 2));
+                }
+                if (x == 1)
+                {
+                    Console.WriteLine(y = 1);
+                }
+            }
+        }
+    }
+        
+ 
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите [a,b] через Enter:");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите шаг h: "); 
+            int h = Convert.ToInt32(Console.ReadLine());
+            Task answer = new Task(a,b,h);//Объявление объекта метода и ввод нужных данных
+            answer.Tasker();//Выполнение функции
+            Console.ReadKey();
+        }
+    }
+}
