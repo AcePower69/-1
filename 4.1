@@ -1,0 +1,6 @@
+int nod( int a, int b )
+{
+   if( a == b ) return a;
+   if( a > b ) return nod(a-b, b);
+   return nod(a,b-a);
+}
